@@ -1,4 +1,4 @@
-export default class ICredentials {
+export default class Credentials {
   user: string;
   pass: string;
   redirectTo?: string;
