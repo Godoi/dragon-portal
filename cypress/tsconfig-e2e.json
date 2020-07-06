@@ -1,0 +1,14 @@
+{
+    "include": [
+        "support/*.ts",
+        "integration/*.ts",
+        "../node_modules/cypress"
+    ],
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "lib": ["es2015", "dom"],
+        "types": ["cypress", "node"]
+    }
+}
