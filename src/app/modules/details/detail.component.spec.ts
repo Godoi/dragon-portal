@@ -26,7 +26,7 @@ describe('DetailComponent', () => {
     fixture = TestBed.createComponent(DetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    dragonService = TestBed.get(DragonService);
+    dragonService = TestBed.inject(DragonService);
     await fixture.whenStable();
   });
 

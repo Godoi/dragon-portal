@@ -23,12 +23,12 @@ describe('HeaderComponent', () => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    authService = TestBed.get(AuthService);
+    authService = TestBed.inject(AuthService);
 
-    const originalNavigate = TestBed.get(Router).navigate;
-    spyOn(TestBed.get(Router), 'navigate').and.callFake((...options) => {
+    const originalNavigate = TestBed.inject(Router).navigate;
+    spyOn(TestBed.inject(Router), 'navigate').and.callFake((...options) => {
       fixture.ngZone.run(() => {
-        originalNavigate.apply(TestBed.get(Router), options);
+        originalNavigate.apply(TestBed.inject(Router), options);
       });
     });
 
@@ -40,7 +40,7 @@ describe('HeaderComponent', () => {
   });
   describe('Logout', () => {
     it('should call the logout method', () => {
-      jest.spyOn(authService, 'logout').mockReturnValueOnce;
+      jest.spyOn(authService, 'logout').mockReturnValueOnce(true);
       expect(authService.logout()).toEqual(true);
     });
   });

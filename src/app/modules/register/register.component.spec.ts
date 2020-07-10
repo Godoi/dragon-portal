@@ -25,7 +25,7 @@ describe('RegisterComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
-    dragonService = TestBed.get(DragonService);
+    dragonService = TestBed.inject(DragonService);
     fixture.detectChanges();
   });
 

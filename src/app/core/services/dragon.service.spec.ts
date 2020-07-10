@@ -14,9 +14,9 @@ beforeEach(async(() => {
     imports: [HttpClientModule, HttpClientTestingModule],
   });
 
-  httpTestingController = TestBed.get(HttpTestingController);
-  service = TestBed.get(DragonService);
-  httpMock = TestBed.get(HttpTestingController);
+  httpTestingController = TestBed.inject(HttpTestingController);
+  service = TestBed.inject(DragonService);
+  httpMock = TestBed.inject(HttpTestingController);
   jest.spyOn(console, 'error').mockImplementation(() => undefined);
 }));
 

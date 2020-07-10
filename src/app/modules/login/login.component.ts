@@ -14,7 +14,6 @@ export class LoginComponent implements OnInit {
   public error = '';
   public loginForm: FormGroup;
 
-  private subscriptions = new Subscription();
   private options = {
     autoClose: false,
     keepAfterRouteChange: false,
@@ -63,7 +62,4 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  ngOnDestroy(): void {
-    this.subscriptions.unsubscribe();
-  }
 }
