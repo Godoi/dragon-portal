@@ -13,4 +13,7 @@
     color: map-get($colors, 'raven');
     font-size: 1rem;
   }
+  @media (max-width: 687px) {
+    width: 88%;
+  }
 }

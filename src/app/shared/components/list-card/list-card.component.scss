@@ -48,3 +48,12 @@
     }
   }
 }
+@media (max-width: 687px) {
+.row-list{
+  justify-content: space-between;
+  .col.col-3 {
+      flex: 0 0 90%;
+      max-width: 90%;
+    }
+  }
+}
