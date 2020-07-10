@@ -1,0 +1,53 @@
+<div class="row" *ngIf="hidden">
+	<div class="col" data-cy="msg">
+		<div class="card shadow">
+			<div class="card-body">
+				<h1>There is no record.</h1>
+				<p><a href="/register"> Click here to add a new Dragon</a>.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-list" *ngIf="!hidden">
+	<div class="col col-3" *ngFor="let item of data" data-cy="list-dragon">
+		<div class="card shadow">
+			<div class="thumb center">
+				<p data-cy="name">{{ item.name }}</p>
+			</div>
+			<div class="card-body">
+				<p>Type: {{ item.type }}</p>
+				<p>Name: {{ item.name }}</p>
+				<p>Creation date: {{ item.createdAt }}</p>
+				<p data-cy="id" class="hidden">{{ item.id }}</p>
+			</div>
+			<div class="btn-group">
+				<button
+					type="button"
+					class="btn"
+					[routerLink]="['/detail/', item.id]"
+					data-cy="btn-view"
+				>
+					View
+				</button>
+				<button
+					type="button"
+					class="btn"
+					[routerLink]="['/register/', item.id]"
+					data-cy="btn-edit"
+					data-rel="item.id"
+				>
+					Edit
+				</button>
+				<button
+					type="button"
+					class="btn btn-delete"
+					(click)="modalDialog(item)"
+					data-cy="btn-delete"
+				>
+					Delete
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

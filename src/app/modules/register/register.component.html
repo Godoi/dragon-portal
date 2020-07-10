@@ -1,0 +1,55 @@
+<app-header> </app-header>
+<section class="pag-register container">
+	<form #f="ngForm" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+		<div class="row">
+			<div class="col" data-cy="register-dragon">
+				<div class="card shadow">
+					<div class="card-body">
+						<h1 data-cy="title">{{ title }}</h1>
+						<label for="type">
+							Type: *
+							<input
+								id="type"
+								type="text"
+								class="form-control"
+								formControlName="type"
+								data-cy="type"
+								required
+							/>
+						</label>
+						<label for="name">
+							Name: *
+							<input
+								id="name"
+								type="text"
+								class="form-control"
+								formControlName="name"
+								data-cy="name"
+								required
+							/>
+						</label>
+						<label for="history">
+							History: *
+							<input
+								id="history"
+								type="text"
+								class="form-control form-history"
+								formControlName="history"
+								data-cy="history"
+								required
+							/>
+						</label>
+						<button
+							class="btn btn-primary"
+							[disabled]="!f.valid"
+							type="submit"
+							data-cy="btn-register"
+						>
+							Register
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</section>

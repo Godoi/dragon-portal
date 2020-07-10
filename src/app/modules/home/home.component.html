@@ -1,0 +1,11 @@
+<app-header> </app-header>
+<alert></alert>
+<section class="pag-home container">
+	<app-list-card
+		class="w100"
+		[hidden]="hidden"
+		[data]="dragons"
+		(deleteDragon)="modalDialog($event)"
+	></app-list-card>
+</section>
+<app-spinner [spinner]="loading"></app-spinner>

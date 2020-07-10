@@ -1,0 +1,45 @@
+<alert></alert>
+<form
+	#f="ngForm"
+	class="container-signin"
+	[formGroup]="loginForm"
+	(ngSubmit)="onSubmit()"
+>
+	<h1>Please sign in</h1>
+	<label for="userName">
+		User name: *
+		<input
+			type="text"
+			id="userName"
+			class="form-control"
+			formControlName="userName"
+			data-cy="username"
+			required
+		/>
+	</label>
+	<label for="pass">
+		Password: *
+		<input
+			type="password"
+			class="form-control"
+			formControlName="password"
+			data-cy="password"
+			required
+		/>
+	</label>
+
+	<div class="alert alert-info" role="alert">
+		<h2>Demo user:</h2>
+		<p>User name: <span>demo</span></p>
+		<p>Password: <span>demo</span></p>
+	</div>
+
+	<button
+		class="btn btn-primary"
+		type="submit"
+		[disabled]="!f.valid"
+		data-cy="cySubmit"
+	>
+		Sign in
+	</button>
+</form>

@@ -1,0 +1,160 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'variables';
+@import 'alert';
+html,
+body {
+  height: 100%;
+  margin: 0;
+  transition: 0.25s ease;
+  font-family: 'Roboto Mono', monospace;
+  display: block;
+}
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+    height: 430px;
+    background-color:rgba(237, 224, 192, 0.5);
+}
+}
+.app {
+  width: 100%;
+}
+a {
+  color: map-get($colors, 'dodger-blue');
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  color: map-get($colors, 'dodger-blue');
+  text-decoration: underline;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-control {
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: map-get($colors, 'gray');
+  background-color: map-get($colors, 'white');
+  background-clip: padding-box;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn {
+  cursor: pointer;
+  font-weight: 400;
+  color: map-get($colors, 'black-alt');
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  margin-top: 20px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  width: 100%;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
+  &.btn-primary {
+    color: map-get($colors, 'white-alt');  
+    background-color: map-get($colors, 'dodger-blue');
+    border-color: map-get($colors, 'dodger-blue');
+  }
+  &.btn-delete { 
+    color: map-get($colors, 'white-alt');
+    background-color: map-get($colors, 'dark-red');
+    border-color: map-get($colors, 'dark-red');
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px) {
+    max-width: 85%;
+  }
+  @media (min-width: 768px) {
+    max-width: 85%;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+.col {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  &.col-3 {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+.shadow {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fefefe;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin-bottom: 40px;
+}
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+.form-control.is-valid, .was-validated .form-control:valid {
+  border-color:  map-get($colors, 'green');
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  border-color: map-get($colors, 'amaranth');
+}
+.w100 {
+  width: 100%;
+}

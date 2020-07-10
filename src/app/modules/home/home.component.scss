@@ -1,0 +1,7 @@
+@import 'variables';
+
+.container {
+  @media (max-width: 576px) {
+    width: 85%;
+  }
+}

@@ -1,0 +1,61 @@
+@import 'variables';
+.alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+.notification{
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 340px;
+}
+.alert-info {
+  color: map-get($colors, 'mosque');  
+  background-color: map-get($colors, 'oyster-bay');
+  border-color: map-get($colors, 'onahau');
+}
+.alert-primary {
+  color: map-get($colors, 'dark-cerulean');
+  background-color: map-get($colors, 'patten-blue');
+  border-color: map-get($colors, 'pale-cornflower-blue');
+}
+.alert-secondary {
+  color: map-get($colors, 'baltic-sea');
+  background-color: map-get($colors, 'solitude');
+  border-color:  map-get($colors, 'link-water');
+}
+.alert-success {
+  color:  map-get($colors, 'crusoe');
+  background-color: map-get($colors, 'swans-down');
+  border-color: map-get($colors, 'granny-apple');
+}
+.alert-danger {
+  color:  map-get($colors, 'red-berry');
+  background-color: map-get($colors, 'pale-pink');
+  border-color: map-get($colors, 'azalea');
+}
+.alert-warning {
+  color:  map-get($colors, 'golden-brown');
+  background-color: map-get($colors, 'china-ivory');
+  border-color: map-get($colors, 'banana-mania');
+}
+.alert-info {
+  color:  map-get($colors, 'mosque');
+  background-color: map-get($colors, 'oyster-bay');
+  border-color: map-get($colors, 'onahau');
+}
+.alert-light {
+  color:  map-get($colors, 'storm-grey');
+  background-color: map-get($colors, 'white');
+  border-color: map-get($colors, 'ghost-white');
+}
+.alert-dark {
+  color:  map-get($colors, 'black-pearl');
+  background-color: map-get($colors, 'pattens-blue');
+  border-color: map-get($colors, 'link-water-alt');
+}

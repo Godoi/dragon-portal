@@ -1,0 +1,29 @@
+<header class="navbar">
+	<div class="container">
+		<a class="navbar-link" href="/">
+			<img class="navbar-logo" src="assets/logo.png" />
+		</a>
+		<div class="navbar-nav">
+			<div class="navbar-left">
+				<a class="nav-link" [routerLink]="['/']" data-cy="menu-dragons">
+					DRAGONS
+				</a>
+				<a
+					class="nav-link"
+					[routerLink]="['/register']"
+					data-cy="menu-add-dragon"
+				>
+					ADD NEW DRAGON
+				</a>
+			</div>
+			<a
+				class="nav-link link-logout"
+				href="/"
+				(click)="logout()"
+				data-cy="menu-logout"
+			>
+				LOGOUT</a
+			>
+		</div>
+	</div>
+</header>

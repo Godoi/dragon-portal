@@ -25,7 +25,7 @@ Developed in Jest [Jest](https://jestjs.io/).
 
 ## Running end-to-end tests
 
-Run `npm rue e2e or npm run cypress` to execute the end-to-end tests via [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html).
+Run `npm run e2e or npm run cypress` to execute the end-to-end tests via [Cypress](https://docs.cypress.io/guides/overview/why-cypress.html).
 
 The tests are available in the <b>application</b> folder.
 

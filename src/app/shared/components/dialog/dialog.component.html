@@ -1,0 +1,10 @@
+<h1>{{ data.title }}</h1>
+<mat-dialog-content [innerHTML]="data.message"></mat-dialog-content>
+<mat-dialog-actions class="btn-group">
+	<button class="btn" data-cy="btn-cancel" (click)="close()">
+		Cancel
+	</button>
+	<button class="btn btn-success" data-cy="btn-confirm" (click)="onConfirm()">
+		Confirm
+	</button>
+</mat-dialog-actions>

@@ -1,0 +1,16 @@
+<app-header> </app-header>
+<section class="pag-detail container">
+	<div class="row" *ngIf="data">
+		<div class="col" data-cy="detail-dragon">
+			<div class="card shadow">
+				<div class="card-body">
+					<strong data-cy="type">Type: {{ data.type }}</strong>
+					<h1 data-cy="name">{{ data.name }}</h1>
+
+					<p class="date">Creation date: {{ data.createdAt }}</p>
+					<p data-cy="history">History: {{ data.history }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

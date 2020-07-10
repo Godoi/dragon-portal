@@ -1,0 +1,23 @@
+@import 'variables';
+:host {
+  display: inline-block;
+}
+.mat-dialog-actions {
+  min-height: auto;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 0px;
+  position: relative;
+  display: inline-flex !important;
+  vertical-align: middle;
+  flex-wrap: initial!important;
+  width: 100%;
+  .btn:first-child {
+    margin-right: 60px;
+  }
+  .btn-success {
+    color: map-get($colors, 'white-alt');
+    background-color:  map-get($colors, 'chatea-green');
+    border-color:  map-get($colors, 'chatea-green');
+  }
+}

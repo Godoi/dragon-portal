@@ -1,5 +1,5 @@
 export default class Credentials {
-  user: string;
-  pass: string;
+  userName: string;
+  password: string;
   redirectTo?: string;
 }

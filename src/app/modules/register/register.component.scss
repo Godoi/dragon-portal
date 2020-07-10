@@ -1,0 +1,11 @@
+.pag-register {
+  label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    cursor:pointer;
+    input[type='text'] {
+      margin: 10px 0;
+    }
+  }
+}
